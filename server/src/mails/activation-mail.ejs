@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Activation</title>
+</head>
+<body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td align="center">
+                <table width="600" border="0" cellspacing="0" cellpadding="0" style="border: 1px solid #ccc; border-radius: 5px; padding: 20px;">
+                    <tr>
+                        <td align="center" style="padding: 20px 0;">
+                            <h1>User Activation</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Hello <%= user.name %>,</p>
+                            <p>Thank you for signing up! To activate your account, please click the button below:</p>
+                           
+                            <p>If the button doesn't work, you can copy and paste the following link into your browser:</p>
+                            <div style="display: flex; justify-content: center;">
+                                <h2 style="font-weight: 700; background-color: crimson; color: black; padding: 10px; text-align: center;"><%= activationCode %></h2>
+                            </div>
+                          
+                            <p>If you did not sign up for this account, you can ignore this email.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding: 20px 0;">
+                            <p>&copy; <%= new Date().getFullYear() %> Your Company Name</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
