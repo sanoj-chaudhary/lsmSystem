@@ -37,8 +37,7 @@ const userSchema: Schema<IUser> = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: [true, "Please enter your password"],
-        minLength: [6, "Password must be at least 6 characters"],
+        // minLength: [6, "Password must be at least 6 characters"],
         select: false,
     },
     avtar: {
@@ -67,6 +66,7 @@ userSchema.pre<IUser>('save', async function (next) {
     if (!this.isModified('password')) {
         next();
     }
+
     this.password = await bcryptjs.hash(this.password, 10);
     next();
 });

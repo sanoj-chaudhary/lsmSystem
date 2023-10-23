@@ -5,12 +5,14 @@ export const app = express();
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import { errorMiddleware } from './src/middleware/error';
-import indexRouter from './src/routes/'
+import indexRouter from './src/routes/';
+import path from 'path';
 app.use(cookieParser());
 app.use(express.json({limit:'50mb'}));
 app.use(cors({
     origin:process.env.CORS_ORIGIN
 }))
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/v1',indexRouter)
 app.get('/api',(req:Request,res:Response,next:NextFunction) => {

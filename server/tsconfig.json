@@ -1,30 +1,24 @@
 {
   "compilerOptions": {
-
     /* Language and Environment */
-    "target": "es2016",                                  /* Set the JavaScript language version for emitted 
+    "target": "es2016", /* Set the JavaScript language version for emitted code. */
 
     /* Modules */
-    "module": "commonjs",                                /* Specify what module code is generated. */
+    "module": "commonjs", /* Specify what module code is generated. */
 
     /* Emit */
-    "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
-     "declarationMap": true,                           /* Create sourcemaps for d.ts files. */
-     "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
+    "declaration": true, /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+    "declarationMap": true, /* Create sourcemaps for d.ts files. */
+    "emitDeclarationOnly": true, /* Only output d.ts files and not JavaScript files. */
 
-    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for 
-            
+    "esModuleInterop": true, /* Emit additional JavaScript to ease support for... */
 
     /* Type Checking */
-    "strict": true,    
-    "outDir": "/src",                                  /* Enable all strict type-checking options. */
+    "strict": true, /* Enable all strict type-checking options. */
+    "outDir": "./dist", /* Specify the output directory for transpiled JavaScript. */
 
-    "skipLibCheck": true
-                           /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
   "include": ["src/**/*.ts"],
-  "typeRoots": [
-    "src/@types",
-    "node_modules/@types"
-  ]
+  "typeRoots": ["./public", "./src/@types", "./node_modules/@types"]
 }
